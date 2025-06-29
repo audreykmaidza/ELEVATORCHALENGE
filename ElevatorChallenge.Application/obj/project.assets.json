@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Application/ElevatorChallenge.Application.csproj",
+      "projectUniqueName": "/Users/audreykmaidza/Desktop/ELEVATORCHALENGE/ElevatorChallenge.Application/ElevatorChallenge.Application.csproj",
       "projectName": "ElevatorChallenge.Application",
-      "projectPath": "/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Application/ElevatorChallenge.Application.csproj",
+      "projectPath": "/Users/audreykmaidza/Desktop/ELEVATORCHALENGE/ElevatorChallenge.Application/ElevatorChallenge.Application.csproj",
       "packagesPath": "/Users/audreykmaidza/.nuget/packages/",
-      "outputPath": "/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Application/obj/",
+      "outputPath": "/Users/audreykmaidza/Desktop/ELEVATORCHALENGE/ElevatorChallenge.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/audreykmaidza/.nuget/NuGet/NuGet.Config"
@@ -51,8 +51,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/ElevatorChallenge.Core.csproj": {
-              "projectPath": "/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/ElevatorChallenge.Core.csproj"
+            "/Users/audreykmaidza/Desktop/ELEVATORCHALENGE/ElevatorChallenge.Core/ElevatorChallenge.Core.csproj": {
+              "projectPath": "/Users/audreykmaidza/Desktop/ELEVATORCHALENGE/ElevatorChallenge.Core/ElevatorChallenge.Core.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jUQuPhPlbOY=",
+  "dgSpecHash": "T0DR+ES+Et8=",
   "success": true,
-  "projectFilePath": "/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Tests/ElevatorChallenge.Tests.csproj",
+  "projectFilePath": "/Users/audreykmaidza/Desktop/ELEVATORCHALENGE/ElevatorChallenge.Tests/ElevatorChallenge.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/audreykmaidza/.nuget/packages/autofixture/4.18.1/autofixture.4.18.1.nupkg.sha512",
     "/Users/audreykmaidza/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
