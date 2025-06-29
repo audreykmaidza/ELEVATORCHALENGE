@@ -1,0 +1,11 @@
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/bin/Debug/net9.0/ElevatorChallenge.Core.deps.json
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/bin/Debug/net9.0/ElevatorChallenge.Core.dll
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/bin/Debug/net9.0/ElevatorChallenge.Core.pdb
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/obj/Debug/net9.0/ElevatorChallenge.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/obj/Debug/net9.0/ElevatorChallenge.Core.AssemblyInfoInputs.cache
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/obj/Debug/net9.0/ElevatorChallenge.Core.AssemblyInfo.cs
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/obj/Debug/net9.0/ElevatorChallenge.Core.csproj.CoreCompileInputs.cache
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/obj/Debug/net9.0/ElevatorChallenge.Core.dll
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/obj/Debug/net9.0/refint/ElevatorChallenge.Core.dll
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/obj/Debug/net9.0/ElevatorChallenge.Core.pdb
+/Users/audreykmaidza/Desktop/ElevatorChallengeAudrey/ElevatorChallenge.Core/obj/Debug/net9.0/ref/ElevatorChallenge.Core.dll
