@@ -1,0 +1,27 @@
+@startuml ElevatorSequenceDiagram
+actor User
+participant ConsoleUI
+participant ServiceProvider
+participant ElevatorController
+participant NearestElevatorDispatcher
+participant IBuilding
+participant IElevatorFactory
+participant IElevator
+
+User -> ConsoleUI: Start application
+ConsoleUI -> ServiceProvider: Resolve IElevatorController, IBuilding, IElevatorFactory
+ServiceProvider -> IElevatorFactory: Create elevators
+IElevatorFactory --> ServiceProvider: IElevator instances
+ServiceProvider --> ConsoleUI: ElevatorController, Building
+ConsoleUI -> IBuilding: AddElevator(IElevator)
+User -> ConsoleUI: Request elevator (floor, passengers, direction)
+ConsoleUI -> ElevatorController: RequestElevator(floor, passengers, direction)
+ElevatorController -> NearestElevatorDispatcher: DispatchElevator(request)
+NearestElevatorDispatcher -> IBuilding: GetElevators()
+IBuilding --> NearestElevatorDispatcher: List<IElevator>
+NearestElevatorDispatcher -> IElevator: MoveToFloor(floor)
+IElevator --> NearestElevatorDispatcher: Confirm movement
+NearestElevatorDispatcher --> ElevatorController: Selected Elevator
+ElevatorController --> ConsoleUI: Elevator dispatched
+ConsoleUI --> User: Display confirmation
+@enduml

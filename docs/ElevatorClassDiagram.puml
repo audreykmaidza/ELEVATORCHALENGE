@@ -1,0 +1,141 @@
+@startuml ElevatorClassDiagram
+package "Entities" {
+    class Building {
+        -int numberOfFloors
+        -List<IElevator> elevators
+        +AddElevator(elevator: IElevator)
+        +GetElevators(): List<IElevator>
+        +GetNumberOfFloors(): int
+    }
+
+    class ElevatorStatus {
+        -int currentFloor
+        -Direction direction
+        -bool isMoving
+        -int passengerCount
+    }
+
+    class FloorRequest {
+        -int floor
+        -int passengerCount
+        -Direction direction
+    }
+
+    enum Direction {
+        Up
+        Down
+        Idle
+    }
+}
+
+package "Interfaces" {
+    interface IElevator {
+        +Id: int
+        +ElevatorType: string
+        +MoveToFloor(floor: int)
+        +AddPassengers(count: int)
+        +RemovePassengers(count: int)
+        +GetStatus(): ElevatorStatus
+    }
+
+    interface IBuilding {
+        +AddElevator(elevator: IElevator)
+        +GetElevators(): List<IElevator>
+        +GetNumberOfFloors(): int
+    }
+
+    interface IElevatorController {
+        +RequestElevator(floor: int, passengers: int, direction: Direction)
+        +GetElevatorStatus(elevatorId: int): ElevatorStatus
+    }
+
+    interface IElevatorDispatcher {
+        +DispatchElevator(request: FloorRequest): IElevator
+    }
+
+    interface IElevatorFactory {
+        +CreateElevator(type: string, id: int, capacity: int, maxFloors: int): IElevator
+    }
+}
+
+package "Implementations" {
+    class Elevator {
+        -int id
+        -int maxPassengers
+        -int currentFloor
+        -Direction direction
+        -bool isMoving
+        -int passengerCount
+        +MoveToFloor(floor: int)
+        +AddPassengers(count: int)
+        +RemovePassengers(count: int)
+        +GetStatus(): ElevatorStatus
+    }
+
+    class FreightElevator {
+        -int id
+        -int maxWeight
+        -int currentFloor
+        -Direction direction
+        -bool isMoving
+        -int currentWeight
+        +MoveToFloor(floor: int)
+        +AddPassengers(weight: int)
+        +RemovePassengers(weight: int)
+        +GetStatus(): ElevatorStatus
+    }
+
+    class HighSpeedElevator {
+        -int id
+        -int maxPassengers
+        -int currentFloor
+        -Direction direction
+        -bool isMoving
+        -int passengerCount
+        -double speed
+        +MoveToFloor(floor: int)
+        +AddPassengers(count: int)
+        +RemovePassengers(count: int)
+        +GetStatus(): ElevatorStatus
+    }
+
+    class ElevatorController {
+        -IElevatorDispatcher dispatcher
+        -IBuilding building
+        +RequestElevator(floor: int, passengers: int, direction: Direction)
+        +GetElevatorStatus(elevatorId: int): ElevatorStatus
+    }
+
+    class NearestElevatorDispatcher {
+        -IBuilding building
+        +DispatchElevator(request: FloorRequest): IElevator
+    }
+
+    class ElevatorFactory {
+        +CreateElevator(type: string, id: int, capacity: int, maxFloors: int): IElevator
+    }
+}
+
+package "DI Configuration" {
+    class ServiceConfiguration {
+        +ConfigureServices(): IServiceProvider
+    }
+}
+
+Building .|> IBuilding
+IBuilding o--> "many" IElevator
+IElevator <|.. Elevator
+IElevator <|.. FreightElevator
+IElevator <|.. HighSpeedElevator
+ElevatorController .|> IElevatorController
+NearestElevatorDispatcher .|> IElevatorDispatcher
+ElevatorFactory .|> IElevatorFactory
+ElevatorController --> IElevatorDispatcher
+ElevatorController --> IBuilding
+NearestElevatorDispatcher --> IBuilding
+IElevator --> ElevatorStatus
+ServiceConfiguration --> ElevatorController
+ServiceConfiguration --> NearestElevatorDispatcher
+ServiceConfiguration --> IBuilding
+ServiceConfiguration --> IElevatorFactory
+@enduml

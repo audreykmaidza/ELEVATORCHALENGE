@@ -1,0 +1,21 @@
+@startuml ElevatorUseCaseDiagram
+actor User
+
+User --> (Call Elevator)
+User --> (View Elevator Status)
+
+(Call Elevator) .> (Select Floor) : include
+(Call Elevator) .> (Specify Passenger Count) : include
+(Call Elevator) .> (Specify Direction) : include
+
+note right of (Call Elevator)
+    User requests an elevator to a specific floor
+    with a given number of passengers or weight
+    and direction.
+end note
+
+note right of (View Elevator Status)
+    User views real-time status of elevators,
+    including type, floor, direction, and load.
+end note
+@enduml
